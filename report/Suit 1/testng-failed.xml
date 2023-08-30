@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suit 1]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Regression(failed)">
+    <classes>
+      <class name="CheckSearchReturnsCorrectResults">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="startDriver"/>
+          <include name="checkCorrectSearchResults" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- CheckSearchReturnsCorrectResults -->
+    </classes>
+  </test> <!-- Regression(failed) -->
+</suite> <!-- Failed suite [Suit 1] -->
