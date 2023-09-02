@@ -1,0 +1,6 @@
+TestBase.class
+testData\ReadData.class
+CheckLandingOnHomePage.class
+CheckThatManualOptionanIsSelected.class
+CheckSearchReturnsCorrectResults.class
+PrintNumberOfMatchedResults.class

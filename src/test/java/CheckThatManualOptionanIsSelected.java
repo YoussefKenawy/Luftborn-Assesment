@@ -1,4 +1,9 @@
 import Pages.LandingPage;
+import com.google.common.base.Verify;
+import com.google.common.base.VerifyException;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -14,7 +19,6 @@ public class CheckThatManualOptionanIsSelected extends TestBase{
     public Object[][]searchData() throws IOException {
         //read from excel
         ReadData readData = new ReadData();
-
         return readData.read_data();
 
     }
@@ -26,8 +30,9 @@ public class CheckThatManualOptionanIsSelected extends TestBase{
         landingPage.enterDataToSearchFor(keyword);
         landingPage.ClickOnSearchButton();
         landingPage.ClickOnManualCheckBox();
+        Actions actions= new Actions(driver);
+
         softAssert.assertTrue( landingPage.isManualOptionChecked());
         softAssert.assertAll();
-
     }
 }
