@@ -19,16 +19,18 @@ public class TestBase {
     SoftAssert softAssert = new SoftAssert();
 
     @BeforeMethod
-    public void startDriver() {
+    public void startDriver()
 
+    {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.navigate().to("https://www.ebay.com");
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         // initialize ExtentXReporter
         ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter("Extent Report.html");
-         extent = new ExtentReports();
+        extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
+
     }
 
 

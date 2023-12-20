@@ -1,11 +1,17 @@
 package Pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import java.util.List;
+
 public class LandingPage extends PagePase {
+
+
+
     @FindBy(id = "//srp-results srp-list ]")
     WebElement totalNumberOfDisplayedElements;
     @FindBy(id = "gh-ac")
@@ -36,6 +42,11 @@ public class LandingPage extends PagePase {
         wait.until(ExpectedConditions.visibilityOf(searchBtn)).click();
     }
 
+    /*public List<WebElement> web()
+    {
+         List<WebElement> element= driver.findElements(By.id("//div/ul/li"));
+         return  element;
+    }*/
     public String searchResultsValue() {
 
         return    wait.until(ExpectedConditions.visibilityOf(searchValueTeller)).getText();
